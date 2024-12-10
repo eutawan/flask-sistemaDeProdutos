@@ -1,0 +1,68 @@
+/* Reset de margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do body */
+body {
+    font-family: 'Verdana', sans-serif;
+    background-color: #e6f7ff;
+    color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container principal */
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #d9d9d9;
+}
+
+/* Título principal */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #005073;
+}
+
+/* Container dos botões */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Estilo dos botões */
+.btn {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #009688;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #00796b;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+    
+    .btn {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+}

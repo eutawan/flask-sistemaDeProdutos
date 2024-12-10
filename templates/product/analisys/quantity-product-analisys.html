@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Gráfico de Quantidade de Estoque</title>
+</head>
+<body>
+    <h1>Análise de Quantidade de Produtos</h1>
+    {% if graphic_html %}
+        {{ graphic_html | safe }}
+    {% else %}
+        <p>Nenhum dado disponível para análise.</p>
+    {% endif %}
+</body>
+</html>

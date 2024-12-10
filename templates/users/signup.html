@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/signup.css')}}">
+</head>
+<body>
+    <div class="container">
+        <h2>User Registration</h2>
+        <form action="/users/signup" method="POST">
+            
+            <label for="loginuser">Username</label>
+            <input type="text" id="loginuser" name="loginuser" placeholder="Enter your username" required>
+
+            
+            <label for="senha">Password</label>
+            <input type="password" id="senha" name="senha" placeholder="Enter your password" required>
+            
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+
+            <label for="tipouser">User Type</label>
+            <select id="tipouser" name="tipouser" required>
+                <option value="standard">Standard</option>
+                <option value="admin">Admin</option>
+            </select>
+
+            
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
+

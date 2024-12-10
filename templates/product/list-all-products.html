@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Catalog</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/list-all-products.css') }}">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <h1 class="title">Product Catalog</h1>
+    </div>
+    <nav class="header-right">
+      <a href="{{ url_for('product.register') }}" class="nav-button">Register Product</a>
+      <a href="{{ url_for('users.logout') }}" class="nav-button">Logout</a>
+      <a href="{{ url_for('product.analisys.quantity') }}" class="nav-button">Quantity</a>
+      <a href="{{ url_for('product.analisys.sales') }}" class="nav-button">Sales</a>
+    </nav>
+  </header>
+  <main>
+    <table class="product-list">
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for product in products %}
+          <tr>
+            <td>{{ product.name }}</td>
+            <td>R$ {{ product.price }}</td>
+            <td>{{ product.quantity }}</td>
+            <td>
+              <a href="{{ url_for('product.update', product_id=product.id) }}" class="action-button edit-button">Edit</a>
+              <a href="{{ url_for('product.delete', product_id=product.id) }}" class="action-button delete-button">Delete</a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>

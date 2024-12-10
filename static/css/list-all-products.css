@@ -1,0 +1,128 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Verdana', sans-serif;
+  background-color: #eef6fc;
+  color: #2b2b2b;
+  line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2a4d69;
+  color: white;
+  padding: 1em 2em;
+}
+
+.header-left .title {
+  font-size: 1.6em;
+}
+
+.header-right .nav-button {
+  color: white;
+  background-color: #487aa1;
+  padding: 0.6em 1.2em;
+  border-radius: 5px;
+  font-size: 1em;
+  margin-left: 0.7em;
+  text-decoration: none;
+}
+
+.header-right .nav-button:hover {
+  background-color: #365d81;
+}
+
+/* Centralizar e estilizar tabela */
+main {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  min-height: 80vh; /* Garante que a tabela fique centralizada na maior parte da tela */
+}
+
+table.product-list {
+  width: 85%; /* Ajusta a largura da tabela */
+  margin: 0 auto; /* Garante que a tabela fique centralizada */
+  border-radius: 8px; /* Bordas arredondadas */
+  overflow: hidden; /* Remove conteúdo excedente nas bordas arredondadas */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); /* Sombra para efeito flutuante */
+  background-color: #ffffff;
+}
+
+/* Estilo do cabeçalho da tabela */
+table.product-list thead {
+  background-color: #365d81;
+  color: white;
+  text-align: center;
+}
+
+table.product-list th {
+  padding: 1em;
+  font-size: 1em;
+}
+
+/* Estilo das células */
+table.product-list td {
+  padding: 1em;
+  font-size: 0.95em;
+  text-align: center;
+  border-bottom: 1px solid #cccccc;
+}
+
+/* Estilo das linhas alternadas */
+table.product-list tbody tr:nth-child(odd) {
+  background-color: #f4f9fd;
+}
+
+table.product-list tbody tr:hover {
+  background-color: #dfefff;
+  transform: scale(1.02); /* Leve aumento para destacar a linha */
+  transition: 0.2s ease-in-out;
+}
+
+/* Botões de ação */
+.action-button {
+  text-decoration: none;
+  padding: 0.4em 0.9em;
+  border-radius: 4px;
+  font-size: 0.9em;
+  margin-right: 0.5em;
+}
+
+.edit-button {
+  background-color: #3ab079;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #2a704d;
+}
+
+.delete-button {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #cc4c4c;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  table.product-list {
+    width: 95%; /* Reduz a largura para dispositivos menores */
+  }
+
+  .action-button {
+    font-size: 0.8em; /* Ajusta tamanho dos botões */
+    padding: 0.3em 0.6em;
+  }
+}

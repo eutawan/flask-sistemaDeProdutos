@@ -1,0 +1,4 @@
+LEMBRAR
+
+falta o users_routes do package product
+falta uploads

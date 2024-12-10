@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/login.css')}}">
+</head>
+<body>
+    <div class="container">
+        <h2>User Login</h2>
+        <form action="/users/login" method="POST">
+            <label for="loginuser">Usuário</label>
+            <input type="text" id="loginuser" name="loginuser" placeholder="Digite seu usuário" required>
+
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+</body>
+</html>
+

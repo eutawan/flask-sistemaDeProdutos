@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Update</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/register-product.css')}}">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Update a New Product</h2>
+        <form action="/product/update/{{ product.id }}" method="POST">
+            <label for="name">Product Name</label>
+            <input type="text" id="name" name="name" value="{{ product.name }}" placeholder="Enter the product name" required>
+
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" name="quantity" value="{{ product.quantity }}" placeholder="Enter the quantity" required>
+
+            <label for="price">Price</label>
+            <input type="number" step="0.01" id="price" name="price" value="{{ product.price }}" placeholder="Enter the price" required>
+
+            <button type="submit">Update Product</button>
+        </form>
+    </div>
+</body>
+
+</html>
